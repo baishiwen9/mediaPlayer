@@ -7,13 +7,14 @@
         <title>media-播放器测试页面</title>
     </head>
     <body>
-        <div id="bbtVideo"></div>
+        <div id="videoWrap"></div>
+        <div id="audioWrap"></div>
     </body>
     <script src="../dist/mediaPlayer.min.js"></script>    
     <script>
 
         new MediaPlayer().initVideo({
-            id: 'bbtVideo',
+            id: 'videoWrap',
             src: 'https://v.citv.cn/v5/gongsi/乐高森林.mp4',
             playingCB: function() {
                     console.log('---开发播放---');
@@ -24,7 +25,7 @@
             playEndCB: function() {
                     console.log('---视频播放结束---')
             },
-            beatTime: 5,
+            beatTime: 3,
             playingBeatCB: function() {},
         })
 
