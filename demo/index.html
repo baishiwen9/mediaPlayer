@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+        <link href="../dist/mediaPlayer.min.css" rel="stylesheet" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>media-播放器测试页面</title>
+    </head>
+    <body>
+        <div id="bbtVideo"></div>
+    </body>
+    <script src="../dist/mediaPlayer.min.js"></script>    
+    <script>
+
+        new MediaPlayer().initVideo({
+            id: 'bbtVideo',
+            src: 'https://v.citv.cn/v5/gongsi/乐高森林.mp4',
+            playingCB: function() {
+                    console.log('---开发播放---');
+            },
+            pauseCB: function() {
+                    console.log('---暂停播放---');
+            },
+            playEndCB: function() {
+                    console.log('---视频播放结束---')
+            },
+            beatTime: 5,
+            playingBeatCB: function() {},
+        })
+
+    //    var video = VideoPlayer.init({
+    //        id: 'bbtVideo',
+    //        src: 'https://v.citv.cn/v5/gongsi/乐高森林.mp4',
+    //        playingCB: function() {
+    //             console.log('---开发播放---');
+    //        },
+    //        pauseCB: function() {
+    //             console.log('---暂停播放---');
+    //        },
+    //        playEndCB: function() {
+    //             console.log('---视频播放结束---')
+    //        },
+    //        beatTime: 5,
+    //        playingBeatCB: function() {},
+    //    });
+    //    window.aaabbb = video;
+    </script>
+</html>
